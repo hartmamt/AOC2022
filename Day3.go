@@ -113,25 +113,3 @@ func findItemInAllPacks(maps []map[rune]int) int {
 	}
 	return count
 }
-
-//
-//func findItemInAllPacks(a map[rune]int, b map[rune]int, c map[rune]int) int {
-//	count := 0
-//	for item, _ := range a {
-//		// see
-//		//if rune exists in second map
-//		if _, ok := b[item]; ok {
-//			// see if rune exists in third map
-//			if _, ok := c[item]; ok {
-//				position := unicode.ToLower(item) - rune('a') + 1
-//				if unicode.IsUpper(item) {
-//					position = position + 26
-//				}
-//				count += int(getPriority(item))
-//
-//				fmt.Printf("The character '%c' only occurs once and has a priority of %n\n", item, int(position))
-//			}
-//		}
-//	}
-//	return count
-//}
