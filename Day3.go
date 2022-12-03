@@ -107,8 +107,6 @@ func findItemInAllPacks(maps []map[rune]int) int {
 				position = position + 26
 			}
 			count += int(getPriority(item))
-
-			fmt.Printf("The character '%c' only occurs once and has a priority of %n\n", item, int(position))
 		}
 	}
 	return count
