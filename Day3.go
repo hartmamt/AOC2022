@@ -45,7 +45,6 @@ func main() {
 		lineNumber++
 		prevItems = append(prevItems, line)
 
-		// If we have reached the third line, print it and the previous two lines.
 		if lineNumber%3 == 0 {
 			// create a map of runes to ints
 			threeCompartments := make([]map[rune]int, 3)
