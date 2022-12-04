@@ -26,6 +26,7 @@ func main() {
 
 	counter := 0
 	counter2 := 0
+
 	for scanner.Scan() {
 		x1, y1, x2, y2 := getOrderedPairs(scanner.Text())
 
