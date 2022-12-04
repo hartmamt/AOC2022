@@ -27,14 +27,7 @@ func main() {
 	counter := 0
 	counter2 := 0
 	for scanner.Scan() {
-		line := scanner.Text()
-		numbers := strings.Split(line, ",")
-		group1 := strings.Split(numbers[0], "-")
-		group2 := strings.Split(numbers[1], "-")
-		x1, _ := strconv.Atoi(group1[0])
-		y1, _ := strconv.Atoi(group1[1])
-		x2, _ := strconv.Atoi(group2[0])
-		y2, _ := strconv.Atoi(group2[1])
+		x1, y1, x2, y2 := getOrderedPairs(scanner.Text())
 
 		// Part 1 Check
 		if (x1 >= x2 && y1 <= y2) || (x1 <= x2 && y1 >= y2) {
@@ -52,4 +45,15 @@ func main() {
 	fmt.Println("Part 1: ", counter)
 	fmt.Println("Part 2: ", counter2)
 
+}
+
+func getOrderedPairs(pairs string) (int, int, int, int) {
+	numbers := strings.Split(pairs, ",")
+	group1 := strings.Split(numbers[0], "-")
+	group2 := strings.Split(numbers[1], "-")
+	x1, _ := strconv.Atoi(group1[0])
+	y1, _ := strconv.Atoi(group1[1])
+	x2, _ := strconv.Atoi(group2[0])
+	y2, _ := strconv.Atoi(group2[1])
+	return x1, y1, x2, y2
 }
