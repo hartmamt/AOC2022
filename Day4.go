@@ -36,7 +36,7 @@ func main() {
 		}
 
 		// Part 2 Check
-		if x1 <= x2 && y1 >= x2 || x2 <= x1 && y2 >= x1 {
+		if (x1 <= x2 && y1 >= x2) || (x2 <= x1 && y2 >= x1) {
 			counter2++
 		}
 	}
