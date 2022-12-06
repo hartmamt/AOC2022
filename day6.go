@@ -6,15 +6,6 @@ import (
 	"os"
 )
 
-func characterExists(char string, marker []string) (bool, int) {
-	for i, ch := range marker {
-		if ch == char {
-			return true, i
-		}
-	}
-	return false, 0
-}
-
 func allItemsUnique(letters []string) bool {
 	// Create a map to store the items we have seen
 	seen := make(map[string]bool)
