@@ -40,7 +40,9 @@ func main() {
 				column := i / 4
 				// Push the crate onto the stack
 				if crate != "   " {
+					// Part one
 					stacks[column].Load(crate)
+					// Part to
 					stacksPartTwo[column].Load(crate)
 				}
 				i = i + 3
