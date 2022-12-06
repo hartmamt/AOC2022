@@ -15,22 +15,19 @@ func characterExists(char string, marker []string) (bool, int) {
 	return false, 0
 }
 
-func allItemsUnique(words []string) bool {
+func allItemsUnique(letters []string) bool {
 	// Create a map to store the items we have seen
 	seen := make(map[string]bool)
 
 	// Iterate over the elements in the slice
-	for _, word := range words {
-		// If the item is already in the map, return false
-		if seen[word] {
+	for _, letter := range letters {
+		if seen[letter] {
 			return false
 		}
 
 		// Add the item to the map
-		seen[word] = true
+		seen[letter] = true
 	}
-
-	// If we reach this point, all items are unique
 	return true
 }
 
