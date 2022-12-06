@@ -74,6 +74,3 @@ func main() {
 		fmt.Println(findMarker(line, 14))
 	}
 }
-
-//[g p f j] 1896
-//[p t d s l n z w c j g m v b] 3452
